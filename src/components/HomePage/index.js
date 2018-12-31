@@ -1,6 +1,5 @@
 import { connect } from 'react-redux'
-import Counter from './Counter'
-import { increment, decrement } from '../../actions/Counter'
+import HomePage from './HomePage'
 import { push } from 'connected-react-router'
 
 const mapStateToProps = (state) => {
@@ -10,13 +9,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    incrementCounter: () => dispatch(increment()),
-    decrementCounter: () => dispatch(decrement()),
-    goToHomePage: () => dispatch(push('/'))
+    goToCounter: () => dispatch(push('/counter'))
   }
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Counter)
+)(HomePage)
