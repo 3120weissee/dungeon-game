@@ -1,0 +1,17 @@
+.main-view {
+  height: 65%;
+  width: 100%;
+  border-bottom: thin solid black;
+}
+
+.button-list {
+  height: 35%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-list button:nth-child(n+2) {
+  margin-left: 30px;
+}

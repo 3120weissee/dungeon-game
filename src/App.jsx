@@ -3,8 +3,11 @@ import { Provider } from 'react-redux'
 import { Route, Switch } from 'react-router'
 import { ConnectedRouter } from 'connected-react-router'
 import { store, history } from './Store'
-import Counter from './components/Counter'
-import HomePage from './components/HomePage'
+import StartPage from './components/StartPage'
+import MainGame from './components/MainGame'
+import StorePage from './components/StorePage'
+import Dungeon from './components/Dungeon'
+import './App.css'
 
 export default class App extends Component {
   render() {
@@ -12,8 +15,10 @@ export default class App extends Component {
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <Switch>
-            <Route exact path="/" render={() => <HomePage />} />
-            <Route path="/counter" render={() => <Counter />} />
+            <Route exact path="/" render={() => <StartPage />} />
+            <Route path="/main" render={() => <MainGame />} />
+            <Route path="/store" render={() => <StorePage />} />
+            <Route path="/dungeon" render={() => <Dungeon />} />
           </Switch>
         </ConnectedRouter>
       </Provider>

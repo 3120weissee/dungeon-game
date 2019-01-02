@@ -1,13 +1,20 @@
-import React from 'react'
-import { PageLayout } from '../../components'
+import { connect } from 'react-redux'
+import MainGame from './MainGame'
+import { push } from 'connected-react-router'
 
-export default class MainGame extends React.Component {
-  render() {
-    return (
-      <PageLayout
-        mainView={<div>Equipment Panel</div>}
-        buttonList={[<button>Store</button>, <button>Dungeon</button>]}
-      />
-    )
-  }
+const mapStateToProps = (state) => {
+    const {counter} = state
+    return {value: counter.value}
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        goToStore: () => dispatch(push('/store')),
+        goToDungeon: () => dispatch(push('/dungeon')),
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(MainGame)

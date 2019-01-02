@@ -1,13 +1,19 @@
-import React from 'react'
-import { PageLayout } from '../../components'
+import { connect } from 'react-redux'
+import Dungeon from './Dungeon'
+import { push } from 'connected-react-router'
 
-export default class Dungeon extends React.Component {
-  render() {
-    return (
-      <PageLayout
-        mainView={<div>Event Panel</div>}
-        buttonList={[<button>Back Home</button>, <button>Continue</button>]}
-      />
-    )
-  }
+const mapStateToProps = (state) => {
+    const {counter} = state
+    return {value: counter.value}
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        goToMain: () => dispatch(push('/main'))
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Dungeon)

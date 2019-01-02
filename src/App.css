@@ -1,0 +1,10 @@
+button {
+  background-color: darkblue;
+  border: thin solid royalblue;
+  border-radius: 5px;
+  color: white;
+  height: 35px;
+  width: 120px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
