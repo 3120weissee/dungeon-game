@@ -1,5 +1,5 @@
 import React from 'react'
-import AppContainer from '../../containers/AppContainer'
+import AppContainer from '../../components/AppContainer/index'
 
 export default class StartPage extends React.Component {
   render() {

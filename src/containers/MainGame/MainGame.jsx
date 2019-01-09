@@ -1,5 +1,5 @@
 import React from 'react'
-import PageLayout from '../../containers/PageLayout'
+import PageLayout from '../../components/PageLayout/index'
 
 export default class MainGame extends React.Component {
   render() {

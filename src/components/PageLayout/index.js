@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AppContainer from '../AppContainer'
+import AppContainer from '../AppContainer/index'
 import './PageLayout.css'
 
 export default class PageLayout extends Component {

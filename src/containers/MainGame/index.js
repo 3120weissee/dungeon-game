@@ -1,19 +1,20 @@
 import { connect } from 'react-redux'
-import StorePage from './StorePage'
+import MainGame from './MainGame'
 import { push } from 'connected-react-router'
 
 const mapStateToProps = (state) => {
-  const {counter} = state
-  return {value: counter.value}
+  // const {} = state
+  return {}
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    goToMain: () => dispatch(push('/main'))
+    goToStore: () => dispatch(push('/store')),
+    goToDungeon: () => dispatch(push('/dungeon')),
   }
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(StorePage)
+)(MainGame)
