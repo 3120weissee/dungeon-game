@@ -1,15 +1,16 @@
 import React from 'react'
 import PageLayout from '../../containers/PageLayout'
+import FloorPicker from './FloorPicker'
 
 export default class Dungeon extends React.Component {
   render() {
-    const { goToMain } = this.props
+    const { goToMain, floors } = this.props
+    const unlockedFloors = floors.filter(floor => !floor.locked)
     return (
       <PageLayout
-        mainView={<div>Event Panel</div>}
+        mainView={<FloorPicker unlockedFloors={unlockedFloors} />}
         buttonList={[
-          <button key='dungeon-1' onClick={goToMain}>Back Home</button>,
-          <button key='dungeon-2' onClick={() => {console.log('continue dungeon')}}>Continue</button>
+          <button key='dungeon-1' onClick={goToMain}>Back Home</button>
         ]}
       />
     )

@@ -16,7 +16,7 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
-			title: 'Starter App',
+			title: 'Dungeon App',
 			template: path.resolve('./src/index.html')
 		}),
 		new webpack.HotModuleReplacementPlugin()

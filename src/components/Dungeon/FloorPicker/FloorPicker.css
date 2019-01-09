@@ -1,0 +1,22 @@
+.dungeon-floor-picker-row {
+  border: thin solid black;
+  border-radius: 5px;
+  width: 75%;
+  line-height: 30px;
+}
+
+.dungeon-floor-picker-row:hover {
+  background-color: wheat;
+  cursor: pointer;
+}
+
+.dungeon-floor-picker-row:nth-child(n+2) {
+  margin-top: 5px;
+}
+
+.dungeon-floor-picker-table {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
