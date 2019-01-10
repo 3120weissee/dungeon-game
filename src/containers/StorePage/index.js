@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import StorePage from './StorePage'
 import { push } from 'connected-react-router'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = () => {
   // const {} = state
   return {}
 }
