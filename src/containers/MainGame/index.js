@@ -2,9 +2,11 @@ import { connect } from 'react-redux'
 import MainGame from './MainGame'
 import { push } from 'connected-react-router'
 
-const mapStateToProps = () => {
-  // const {} = state
-  return {}
+const mapStateToProps = (state) => {
+  const { player } = state
+  return {
+    player
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
