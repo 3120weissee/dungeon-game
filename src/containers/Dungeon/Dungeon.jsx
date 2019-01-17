@@ -14,9 +14,9 @@ export default class Dungeon extends React.Component {
 
   loadFloor(event) {
     this.setState({
-      showFloorPicker: false,
-      currentFloor: event.target.id
+      showFloorPicker: false
     })
+    this.props.setCurrentDungeon(event.target.id)
   }
 
   render() {

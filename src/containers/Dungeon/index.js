@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import Dungeon from './Dungeon'
 import { push } from 'connected-react-router'
+import {setFloor} from '../../actions/CurrentDungeon'
 
 const mapStateToProps = (state) => {
   const {dungeon} = state
@@ -12,7 +13,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    goToMain: () => dispatch(push('/main'))
+    goToMain: () => dispatch(push('/main')),
+    setCurrentDungeon: (floor) => dispatch(setFloor(floor))
   }
 }
 

@@ -3,3 +3,12 @@
   width: 200px;
   margin: auto auto;
 }
+
+.floor-end-buttons {
+  height: 100%;
+  width: 300px;
+  margin: auto auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

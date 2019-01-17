@@ -11,7 +11,7 @@ const addFloorEvent = (eventObject, howMany) => {
 export const floors = [
   {
     name: 'Beginning',
-    monster: [].concat(
+    events: [].concat(
       addFloorEvent(Monster.Ram, 1),
       addFloorEvent(Monster.Skeleton, 1),
       addFloorEvent(Monster.CaveBat, 3)

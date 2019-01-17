@@ -1,4 +1,4 @@
-import { deepCopyArray } from "./deepCopy";
+import { deepCopyArray } from './deepCopy'
 
 const getRandomIndex = eventArray => Math.floor(Math.random() * Math.floor(eventArray.length))
 

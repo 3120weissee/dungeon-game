@@ -7,7 +7,9 @@ export const createReducer = (typeHandlers, defaultState) => {
       return state
     }
 
-    return handler(state, action)
+    const result = handler(state, action)
+
+    return {...state, ...result}
   }
 
 }
