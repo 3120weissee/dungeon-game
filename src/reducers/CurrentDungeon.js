@@ -11,15 +11,11 @@ const setFloor = (state, {floor}) => ({
   currentEvent: 0
 })
 
-
-const toNextFloor = (state) => {
-  const nextFloor = state.currentFloor + 1
-  return {
-    currentFloor: nextFloor,
-    eventList: mix(floors[nextFloor].events),
-    currentEvent: 0
-  }
-}
+const toNextFloor = (state, {nextFloor}) => ({
+  currentFloor: nextFloor,
+  eventList: mix(floors[nextFloor].events),
+  currentEvent: 0
+})
 
 const resetCurrentDungeon = () => ({...defaultState})
 

@@ -1,16 +1,22 @@
 import { createReducer } from '../utils/Redux'
 import { DUNGEON } from '../actions/Dungeon'
+import { CURRENT_DUNGEON } from '../actions/CurrentDungeon'
 import { floors } from '../data/floors'
+import {deepCopyArray} from "../utils/deepCopy";
 
 const defaultState = {
   floors: floors
 }
 
-const increment = (state) => ({value: state.value+1})
+const unlockFloor = (state, {nextFloor}) => {
+  const newFloors = deepCopyArray(state.floors)
+  newFloors[nextFloor].locked = false
 
-const decrement = (state) => ({value: state.value-1})
+  return {
+    floors: newFloors
+  }
+}
 
 export const dungeonReducer = createReducer({
-  [DUNGEON.INCREMENT]: increment,
-  [DUNGEON.DECREMENT]: decrement
+  [CURRENT_DUNGEON.NEXT_FLOOR]: unlockFloor
 }, defaultState)

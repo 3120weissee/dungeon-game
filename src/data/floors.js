@@ -12,17 +12,21 @@ export const floors = [
   {
     name: 'Beginning',
     events: [].concat(
-      addFloorEvent(Monster.Ram, 1),
-      addFloorEvent(Monster.Skeleton, 1),
-      addFloorEvent(Monster.CaveBat, 3)
+      addFloorEvent(Monster.Ram, 1)
     )
   },
   {
     name: 'Middle',
-    // locked: true
+    events: [].concat(
+      addFloorEvent(Monster.Skeleton, 1)
+    ),
+    locked: true
   },
   {
     name: 'End',
-    // locked: true
+    events: [].concat(
+      addFloorEvent(Monster.CaveBat, 3)
+    ),
+    locked: true
   }
 ]

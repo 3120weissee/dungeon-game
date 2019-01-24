@@ -5,17 +5,18 @@ import { toNextFloor, incrementCurrentEvent } from '../../actions/CurrentDungeon
 
 const mapStateToProps = (state) => {
   const {currentDungeon} = state
-  const { eventList, currentEvent } = currentDungeon
+  const { eventList, currentEvent, currentFloor } = currentDungeon
   return {
     eventList,
-    currentEvent
+    currentEvent,
+    currentFloor: parseInt(currentFloor)
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     goToMain: () => dispatch(push('/main')),
-    goToNextFloor: () => dispatch(toNextFloor()),
+    goToNextFloor: (nextFloor) => dispatch(toNextFloor(nextFloor)),
     incrementCurrentEvent: () => dispatch(incrementCurrentEvent())
   }
 }

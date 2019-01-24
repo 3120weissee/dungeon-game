@@ -5,7 +5,7 @@ export const CURRENT_DUNGEON = {
   INCREMENT_EVENT: 'increment-current-event'
 }
 
-export const toNextFloor = () => ({type: CURRENT_DUNGEON.NEXT_FLOOR})
+export const toNextFloor = (nextFloor) => ({type: CURRENT_DUNGEON.NEXT_FLOOR, nextFloor})
 
 export const setFloor = (floor) => ({type: CURRENT_DUNGEON.SET_FLOOR, floor})
 

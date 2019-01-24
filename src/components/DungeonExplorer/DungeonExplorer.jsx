@@ -18,14 +18,14 @@ export default class DungeonExplorer extends Component {
         </div>
       </div>
     )
-
   }
 
   showContinue() {
+    const { goToMain, goToNextFloor, currentFloor } = this.props
     return (
       <div className='floor-end-buttons'>
-        <button>Next Floor</button>
-        <button>Back Home</button>
+        <button onClick={() => goToNextFloor(currentFloor+1)}>Next Floor</button>
+        <button onClick={goToMain}>Back Home</button>
       </div>
     )
   }
