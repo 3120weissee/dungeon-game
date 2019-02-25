@@ -9,6 +9,6 @@
   width: 300px;
   margin: auto auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }

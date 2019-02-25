@@ -1,15 +1,17 @@
 import { connect } from 'react-redux'
 import DungeonExplorer from './DungeonExplorer'
 import { push } from 'connected-react-router'
-import { toNextFloor, incrementCurrentEvent } from '../../actions/CurrentDungeon'
+import { unlockFloor, toNextFloor, incrementCurrentEvent } from '../../actions/Dungeon'
 
 const mapStateToProps = (state) => {
-  const {currentDungeon} = state
-  const { eventList, currentEvent, currentFloor } = currentDungeon
+  const {dungeon} = state
+  const { eventList, currentEvent, currentFloor, floors } = dungeon
+  const isLastFloor = floors.length-1 === currentFloor
   return {
     eventList,
     currentEvent,
-    currentFloor: parseInt(currentFloor)
+    currentFloor: parseInt(currentFloor),
+    isLastFloor
   }
 }
 
@@ -17,7 +19,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     goToMain: () => dispatch(push('/main')),
     goToNextFloor: (nextFloor) => dispatch(toNextFloor(nextFloor)),
-    incrementCurrentEvent: () => dispatch(incrementCurrentEvent())
+    incrementCurrentEvent: () => dispatch(incrementCurrentEvent()),
+    unlockFloor: (floor) => dispatch(unlockFloor(floor))
   }
 }
 

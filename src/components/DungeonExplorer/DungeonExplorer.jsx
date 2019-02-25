@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { getRandomColor } from '../../utils/randomColor'
+import ContinueButtons from './ContinueButtons'
 import './DungeonExplorer.css'
 
 export default class DungeonExplorer extends Component {
@@ -21,12 +22,14 @@ export default class DungeonExplorer extends Component {
   }
 
   showContinue() {
-    const { goToMain, goToNextFloor, currentFloor } = this.props
+    const { goToNextFloor, currentFloor, unlockFloor, isLastFloor } = this.props
+
     return (
-      <div className='floor-end-buttons'>
-        <button onClick={() => goToNextFloor(currentFloor+1)}>Next Floor</button>
-        <button onClick={goToMain}>Back Home</button>
-      </div>
+      <ContinueButtons
+        goToNextFloor={goToNextFloor}
+        currentFloor={currentFloor}
+        unlockFloor={unlockFloor}
+        isLastFloor={isLastFloor} />
     )
   }
 

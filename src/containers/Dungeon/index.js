@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import Dungeon from './Dungeon'
 import { push } from 'connected-react-router'
-import {setFloor} from '../../actions/CurrentDungeon'
+import { setFloor } from '../../actions/Dungeon'
 
 const mapStateToProps = (state) => {
   const {dungeon} = state
