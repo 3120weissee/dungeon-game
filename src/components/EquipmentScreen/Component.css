@@ -1,0 +1,16 @@
+.equipment-display-container {
+  width: 50%;
+  margin: auto auto;
+  padding: 0 20px;
+}
+
+.equipment-display-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.equipment-display-columns > div {
+  flex: 1;
+  text-align: left;
+}
