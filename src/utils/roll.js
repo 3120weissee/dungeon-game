@@ -1,0 +1,1 @@
+export const roll = (sides) => Math.floor(Math.random() * sides)

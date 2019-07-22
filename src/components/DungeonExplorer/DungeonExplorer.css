@@ -12,3 +12,13 @@
   justify-content: center;
   align-items: center;
 }
+
+.dungeon-player-info {
+  margin-top: 15px;
+}
+
+.dungeon-attack-log {
+  margin-top: 10px;
+  max-height: 100px;
+  overflow-y: auto;
+}

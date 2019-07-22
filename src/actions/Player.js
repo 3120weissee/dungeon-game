@@ -1,8 +1,5 @@
 export const PLAYER = {
-  INCREMENT: 'counter-increment',
-  DECREMENT: 'counter-decrement'
+  RESET_HP: 'reset-player-hp'
 }
 
-export const increment = () => ({type: PLAYER.INCREMENT})
-
-export const decrement = () => ({type: PLAYER.DECREMENT})
+export const resetHp = () => ({type: PLAYER.RESET_HP})
